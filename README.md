@@ -77,15 +77,9 @@ This file is the input to the parsing module. Save in in resource. Be aware of e
 
 Please delete pre and post html stuff until you see the actual "numbers", and also the html garbage thats post every budget line. Basically, make it look like the DKSource.txt which was the file the parser was build to parse originally.
 
-
- 
-
-
-
-
+Run the Parser.java file and you are good to go!
 
 --
 
-_Project cloned from TheOpenBudget.org 
-(https://github.com/robbiewain/theopenbudget). 
-I have currently no intention of making pull requests to the original project, as this will be so much different from theirs._
+_Project cloned from https://github.com/robbiewain/theopenbudget. 
+I have currently no intention of making pull requests to the original project, as this will be so much different from theirs. Big thanks to Rob d'Apice and Robbie Wain for this awesome project!_
