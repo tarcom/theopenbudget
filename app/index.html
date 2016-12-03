@@ -27,6 +27,51 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
 
+
+//the anmaerkninger/anmærkninger goes here:
+
+function visAnm(anmArg) {
+   var anmAar = anmArg.substr(0,2)
+   var anmPubl = anmArg.substr(2,1)
+   var anmTopic = anmArg.substr(3)
+   if (anmPubl == "3")
+      anmPubl = "FL"
+   else if (anmPubl == "4")
+      anmPubl = "TB"
+   else if (anmPubl == "5")
+      anmPubl = "R"
+   else
+      anmPubl = "FFL"
+   var publType = "A"
+   if (anmPubl == "FFL" && anmAar >= "15")
+      var publType = ""
+   if (anmPubl == "FL" && anmAar >= "15")
+      var publType = ""
+   if (anmPubl == "TB" && anmAar >= "14")
+      var publType = ""
+   if (anmPubl == "R" && anmAar >= "14")
+      var publType = ""
+   if (anmTopic.length == 3)
+      anmTopic = anmTopic.substr(0,2) + "." + anmTopic.substr(2)
+   else if (anmTopic.length == 4)
+      anmTopic = anmTopic.substr(0,2) + "." + anmTopic.substr(2)
+   else if (anmTopic.length == 6)
+      anmTopic = anmTopic.substr(0,2) + "." + anmTopic.substr(2,2) + "." + anmTopic.substr(4)
+   else if (anmTopic.length == 8)
+      anmTopic = anmTopic.substr(0,2) + "." + anmTopic.substr(2,2) + "." + anmTopic.substr(4,2)
+   if (anmTopic.substr(0,1) == "0")
+      anmTopic = anmTopic.substr(1)
+   W = screen.availWidth / 100 * 97
+   H = screen.availHeight / 100 * 96
+  anmWindow = window.open("http://www.oes-cs.dk/bevillingslove/doctopic.cgi?book=BEVPUBL."+anmPubl+anmAar+publType+"&topic="+anmTopic+"&searchtype=3","anm","toolbar=1,location=1,directories=1,status=1,menubar=1,scrollbars=1,resizable=1,width="+W+",height="+H+",left=0,top=0")
+   anmWindow.focus()
+}
+
+// end of anmaerkninger anmærkninger js ....
+
+
+
+
       // Load the Visualization API and the piechart package.
       google.load('visualization', '1.0', {'packages':['corechart']});
 

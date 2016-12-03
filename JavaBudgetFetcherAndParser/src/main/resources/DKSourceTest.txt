@@ -1,0 +1,5 @@
+01 Dronningen <A HREF="javascript:visAnm('15301')">(Anm.)</A><TD>77,2<TD>72,3<TD>79,0<TD>79,0<TD>79,0<TD>79,0
+   011 Statsydelse <A HREF="javascript:visAnm('153011')">(Anm.)</A><TD>77,2<TD>72,3<TD>79,0<TD>79,0<TD>79,0<TD>79,0
+      0111 Statsydelse <A HREF="javascript:visAnm('1530111')">(Anm.)</A><TD>77,2<TD>72,3<TD>79,0<TD>79,0<TD>79,0<TD>79,0
+         011101 Statsydelse <A HREF="javascript:visAnm('153011101')">(Anm.)</A><TD>77,2<TD>72,3<TD>79,0<TD>79,0<TD>79,0<TD>79,0
+            01110110 Almindelig virksomhed <A HREF="javascript:visAnm('153011101')">(Anm.)</A><TD>77,2<TD>72,3<TD>79,0<TD>79,0<TD>79,0<TD>79,0

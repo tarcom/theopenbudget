@@ -58,6 +58,30 @@ open a browser: `http://localhost:9000/`
 
 Make a deployable version, run: **grunt deploy**
 
+------------------
+
+The budget generator is a java module added to this project - **JavaBudgetFetcherAndParser**.
+
+This project gets its data from: http://www.oes-cs.dk/olapdatabase/finanslov/index.cgi (
+FINANSMINISTERIETS FINANSLOVSDATABASE).
+
+It generates data from 5 levels: Paragraf, Hovedområde, Aktivitetsområde, Hovedkonto, Underkonto.
+
+Choose "vælg struktur", add the 5 levels and choose: "Alle niveauer på én gang".
+
+You should NOT use the "download", which will download a csv file (eg. 66E290.csv). You need the anmærkninger and other stuff that is not included in that document.
+
+This mean you have to use the html source file output...
+
+This file is the input to the parsing module. Save in in resource. Be aware of encoding issues! You may want to choose windows-1252 encoding.
+
+
+ 
+
+
+
+
+
 --
 
 _Project cloned from TheOpenBudget.org 
