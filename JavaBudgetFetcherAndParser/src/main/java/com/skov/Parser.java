@@ -17,7 +17,7 @@ import java.util.regex.Pattern;
 public class Parser {
 
     private static final String resourceDir = "C:\\projects\\theopenbudget\\JavaBudgetFetcherAndParser\\src\\main\\resources";
-    public static String parseFile = resourceDir + "\\DKSource.txt";
+    public static String parseFile = resourceDir + "\\2016-12-03.txt";
     public static String outputFile = "C:\\projects\\theopenbudget\\app\\data\\budget.csv";
     public static boolean outputIsUdgifter = true;
 
@@ -59,7 +59,8 @@ public class Parser {
     public static ArrayList<String> doParse(String file) throws Exception {
         BufferedReader br = new BufferedReader(new FileReader(file));
 
-        String headlines = "Portfolio,Department/Agency,Outcome,Program,Expense type,Appropriation type,Description,2013-14,2014-15,2015-16,2016-17,2017-18,Source document,Source table,URL";
+        //String headlines = "Portfolio,Department/Agency,Outcome,Program,Expense type,Appropriation type,Description,2013-14,2014-15,2015-16,2016-17,2017-18,Source document,Source table,URL";
+        String headlines = "Portfolio,Department/Agency,Outcome,Program,Expense type,Appropriation type,Description,2015-16,2016-17,2017-18,2018-19,2019-20,Source document,Source table";
         ArrayList<String> outputList = new ArrayList<String>();
         outputList.add(headlines);
 

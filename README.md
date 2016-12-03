@@ -75,6 +75,8 @@ This mean you have to use the html source file output...
 
 This file is the input to the parsing module. Save in in resource. Be aware of encoding issues! You may want to choose windows-1252 encoding.
 
+Please delete pre and post html stuff until you see the actual "numbers", and also the html garbage thats post every budget line. Basically, make it look like the DKSource.txt which was the file the parser was build to parse originally.
+
 
  
 

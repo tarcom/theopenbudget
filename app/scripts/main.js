@@ -75,7 +75,7 @@ function formatLabels(number){
 
 function commaSeparateNumber(val) {
     while (/(\d+)(\d{3})/.test(val.toString())){
-        val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
+        val = val.toString().replace(/(\d+)(\d{3})/, '$1'+'.'+'$2');
     }
     return val;
 }
@@ -141,7 +141,7 @@ function findElementFromID(pie_id) {
 }
 
 function updatePieAnnotation(element) {
-    $('.total_body').text('Kr.' + commaSeparateNumber((element.value/1000).toFixed(0)) + 'm');
+    $('.total_body').text('Kr. ' + commaSeparateNumber((element.value/1000).toFixed(0)) + 'm');
     if (element.i === 0) {
         $('.total_head').text('Samlede offentlige udgifter');
     } else {
@@ -492,7 +492,7 @@ centreGroup.append('svg:text')
   .attr('class', 'total_caption')
   .attr('dy', -15)
   .attr('text-anchor', 'middle') // text-align: right
-  .text('16-17 BUDGET:');
+  .text('16-17 BUDGET (mill):');
 
 
 $('.total_body').click(function() {
