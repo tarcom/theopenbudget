@@ -1,12 +1,14 @@
-# TheOpenBudget.org
+# statsbudgettet.dk 
 
-A cutting edge government transparency project, allowing you to quickly and easily explore where the Australian government spends your money.
+Project cloned from TheOpenBudget.org
 
-## Contact
-
-Get in touch on twitter if you want to know more: @theopenbudget
+StatsBudgettet.dk shows you how the Danish government spends your money.
 
 ## Development
+
+git clone this project locally.
+
+Download notejs from https://nodejs.org/en/download/
 
 To install dependencies you will need to install npm and then run:
     
