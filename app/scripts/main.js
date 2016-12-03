@@ -55,7 +55,7 @@ String.prototype.trunc =
     };
 
 function addCommas(string) {
-    return string.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1,');
+    return string.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1.');
 }
 
 function roundToDP(number, decimalPlaces) {
@@ -66,9 +66,9 @@ function roundToDP(number, decimalPlaces) {
 function formatLabels(number){
     var label = "";
     if (number > 999499) {
-        label = '$' + addCommas(roundToDP(number/1000000,1).toString()) + 'b';
+        label = 'Kr.' + addCommas(roundToDP(number/1000000,1).toString()) + 'b';
     } else {
-        label = '$' + addCommas(roundToDP(number/1000,0).toString()) + 'm';
+        label = 'Kr.' + addCommas(roundToDP(number/1000,0).toString()) + 'm';
     }
     return label;
 }
@@ -81,7 +81,7 @@ function commaSeparateNumber(val) {
 }
 
 function populateSidebar(budgetItem) {
-    var name = (budgetItem.i === 0 ? 'Total Government Expenditure' : budgetItem.n);
+    var name = (budgetItem.i === 0 ? 'Samlede offentlige udgifter' : budgetItem.n);
     $('#item_name').text(name);
     if(name.length > 100){
         $('#item_name').addClass("small");
@@ -89,7 +89,7 @@ function populateSidebar(budgetItem) {
         $('#item_name').removeClass("small");
     }
     redrawChart(budgetItem);
-    $('#individual_taxpayer').text('$' + addCommas(roundToDP(budgetItem.v2*1000/23022031, 2).toString()));
+    $('#individual_taxpayer').text('Kr. ' + addCommas(roundToDP(budgetItem.v2*1000/4300000, 0).toString()));
     if (!budgetItem.children) {
         $("#source_row").show();
         $('#item_source').html('<a href="' + budgetItem.u + '">' + budgetItem.sd + ' (' + budgetItem.st + ')</a>');
@@ -141,9 +141,9 @@ function findElementFromID(pie_id) {
 }
 
 function updatePieAnnotation(element) {
-    $('.total_body').text('$' + commaSeparateNumber((element.value/1000).toFixed(0)) + 'm');
+    $('.total_body').text('Kr.' + commaSeparateNumber((element.value/1000).toFixed(0)) + 'm');
     if (element.i === 0) {
-        $('.total_head').text('Total Government Expenditure');
+        $('.total_head').text('Samlede offentlige udgifter');
     } else {
         $('.total_head').text(element.n);
     }
@@ -567,7 +567,7 @@ $('#searchBox').typeahead(
       displayKey: 't',
       source: portfolios.ttAdapter(),
       templates: {
-        header: '<h3 class="searchHeading">Portfolios</h3>'
+        header: '<h3 class="searchHeading">Budget</h3>'
       }
     },
     {
@@ -575,7 +575,7 @@ $('#searchBox').typeahead(
       displayKey: 't',
       source: departments.ttAdapter(),
       templates: {
-        header: '<h3 class="searchHeading">Departments</h3>'
+        header: '<h3 class="searchHeading">Område</h3>'
       }
     },
     {
@@ -583,7 +583,7 @@ $('#searchBox').typeahead(
       displayKey: 't',
       source: outcomes.ttAdapter(),
       templates: {
-        header: '<h3 class="searchHeading">Outcomes</h3>'
+        header: '<h3 class="searchHeading">Underområde 1</h3>'
       }
     },
     {
@@ -591,7 +591,7 @@ $('#searchBox').typeahead(
       displayKey: 't',
       source: programs.ttAdapter(),
       templates: {
-        header: '<h3 class="searchHeading">Programs</h3>'
+        header: '<h3 class="searchHeading">Underområde 2</h3>'
       }
     },
     {
@@ -599,7 +599,7 @@ $('#searchBox').typeahead(
       displayKey: 't',
       source: descriptions.ttAdapter(),
       templates: {
-        header: '<h3 class="searchHeading">Line items</h3>'
+        header: '<h3 class="searchHeading">Underområde 3</h3>'
       }
     }
 );

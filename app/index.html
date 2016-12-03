@@ -2,20 +2,14 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <meta name="twitter:card" content="summary">
-        <meta name="twitter:site" content="@theopenbudget">
-        <meta name="twitter:title" content="Where does the government spend its money? TheOpenBudget.org">
-        <meta name="twitter:description" content="Find out where your Australian taxes are going with our government expenditure data visualisation.">
-        <meta name="twitter:creator" content="@theopenbudget">
-        <meta name="twitter:image" content="http://theopenbudget.org/images/theopenbudget.png">
-        <meta property="og:title" content="Where does the government spend its money? TheOpenBudget.org" />
+        <meta property="og:title" content="StatsBudgettet.dk" />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="http://theopenbudget.org/" />
-        <meta property="og:image" content="http://theopenbudget.org/images/theopenbudget.png" />
-        <meta property="og:description" content="Find out where your Australian taxes are going with our government expenditure data visualisation." />
-        <meta property="og:site_name" content="The Open Budget" />
-        <title>Where does the government spend its money? TheOpenBudget.org</title>
-        <meta name="description" content="Find out where your Australian taxes are going with our government expenditure data visualisation.">
+        <meta property="og:url" content="http://StatsBudgettet.dk/" />
+        <meta property="og:image" content="http://StatsBudgettet.dk/images/theopenbudget.png" />
+        <meta property="og:description" content="Overskuelig graf over StatsBudgettet.dk" />
+        <meta property="og:site_name" content="Stats Budgettett" />
+        <title>Hvor brugere regeringen dine penge? StatsBudgettet.dk</title>
+        <meta name="description" content="Overskuelig graf over Statens budgett">
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="/favicon.ico">
         <link href="http://fonts.googleapis.com/css?family=Droid Serif&amp;subset=latin" rel="stylesheet" type="text/css">
@@ -205,9 +199,9 @@
 
   </div>
   <div id="sidebar">
-    <h1>TheOpenBudget.org</h1>
+    <h1>StatsBudgettet.dk</h1>
     <div id="search">
-      <input id="searchBox" type="text" placeholder="e.g. Health">
+      <input id="searchBox" type="text" placeholder="f.eks. Aalborg">
     </div>
 
     <div class="item_detail">
@@ -226,24 +220,24 @@
           <div class="chart_label" id="share_total_label">XX%</div>
         </div>
         <div class="share_container">
-          <h4>% Portfolio</h4>
+          <h4>% Område</h4>
           <div class="share_chart" id="share_portfolio"></div>
           <div class="chart_label" id="share_portfolio_label">XX%</div>
         </div>
         <div class="share_container">
-          <h4>% Outcome</h4>
+          <h4>% Aktivitet</h4>
           <div class="share_chart" id="share_outcome"></div>
           <div class="chart_label" id="share_outcome_label">XX%</div>
         </div>
         <div class="clear"></div>
       </div>
       <div class="row">
-        <div class="label">Cost per Australian person:</div>
+        <div class="label">Hver skatteborger betaler:</div>
         <div id="individual_taxpayer" class="value"></div>
         <div class="clear"></div>
       </div>
       <div class="row" id="source_row">
-        <div class="label">Source:</div>
+        <div class="label">Kilde:</div>
         <div id="item_source" class="value source"></div>
         <div class="clear"></div>
       </div>
@@ -253,7 +247,7 @@
       <div class="wrapper-demo">
         <div id="dd" class="wrapper-dropdown-2" tabindex="1"><span id="current_view_selection">16-17 Budget</span>
           <ul class="dropdown">
-            <li><a href="#" id="1415" class="year_toggle">15-16 Actual</a></li>
+            <li><a href="#" id="1415" class="year_toggle">15-16 Budget</a></li>
             <li><a href="#" id="1516" class="year_toggle">16-17 Budget</a></li>
             <li><a href="#" id="1617" class="year_toggle">17-18 Budget</a></li>
             <li><a href="#" id="1718" class="year_toggle">18-19 Budget</a></li>
@@ -265,14 +259,23 @@
     </div>
   </div>
 
-  <div id="footer"><div class="description">TheOpenBudget is a cutting edge government transparency project, allowing you to easily explore where the Australian government spends your money.<br/>
+  <div id="footer"><div class="description">
+      StatsBudgettet.dk viser dig hvordan regeringen bruger dine penge.
+      Der er <a href="http://www.skm.dk/skattetal/statistik/generel-skattestatistik/bund-,-mellem-og-topskatteydere-1994-2015/">4,3 mio
+      skatteydere</a> i danmark. Beregningen "hver
+      <br/>
+      skatteborger betaler" tager udgangspunkt i dette tal,
+      og viser for hver post hvad du betaler. En gennemsnits skatteyder i danmark
+      <br/>
+      betaler dermed kr. 1,05 billion / 4.3 million indbetalere = kr. 245.248 i skat årligt.
+      <br/>
+      Lavet af Allan Skov <a href="mailto:allan@aogj.com">allan@aogj.com</a>. Sidst opdateret December 2016 med tal fra <a href="http://www.oes-cs.dk/olapdatabase/finanslov/index.cgi" target="_blank">FINANSMINISTERIETS FINANSLOVSDATABASE</a>.
+  </div>
 
-
-          Want to use this data for your own purposes? Be our guest! Check out the <a href="data/budget.json">json export</a>, or download the csvs: <a href="data/budget.csv">2016-17</a>, <a href="data/budget_2014_data.csv">2014-15</a>, <a href="data/budget_2013_data.csv">2013-14</a>. Or get the code from <a href="https://github.com/robbiewain/theopenbudget">github</a>.<br/>TheOpenBudget was originally developed for GovHack 2012; built by <a href="https://twitter.com/robertdapice">Rob d'Apice</a> and <a href="https://twitter.com/robbiewain">Robbie Wain</a>. Questions, comments, complaints? <a href="https://twitter.com/theopenbudget">Hit us up on Twitter</a>.</div>
-    <div class="twitter_share"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://theopenbudget.org" data-text="Check out this amazing interactive visualisation of the Budget!" data-count="vertical" data-via="theopenbudget">Tweet</a>
+    <div class="twitter_share"><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://StatsBudgettet.dk" data-text="Det danske stats budget overskueligt visualiseret" data-count="vertical" data-via="StatsBudgettet.dk">Tweet</a>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></div>
   <div class="facebook_share">
-    <div class="fb-share-button" data-href="http://www.theopenbudget.org" data-type="box_count"></div>
+    <div class="fb-share-button" data-href="http://www.StatsBudgettet.dk" data-type="box_count"></div>
 </div>
 
 </div>
@@ -284,9 +287,7 @@
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+
 
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -296,5 +297,9 @@
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-32376901-1');ga('send','pageview');
         </script>
+
+        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
 </body>
 </html>
